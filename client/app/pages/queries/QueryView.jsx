@@ -54,7 +54,6 @@ function QueryView(props) {
   const {
     queryResult,
     loadedInitialResults,
-    loadedFullResults,
     isExecuting,
     executionStatus,
     executeQuery,
@@ -187,7 +186,6 @@ function QueryView(props) {
               canRefresh={policy.canRun(query)}
             />
           )}
-          {loadedInitialResults && !loadedFullResults && <div style={{color: "orange", textAlign: "center"}}>Still loading more results...</div>}
           <div className="query-results-footer">
             {queryResult && !queryResult.getError() && (
               <QueryExecutionMetadata

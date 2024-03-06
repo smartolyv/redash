@@ -163,7 +163,7 @@ class Widget {
       this.queryResult = queryResult;
 
       queryResult
-        .toPromise()[0]
+        .toPromise()
         .then(result => {
           if (this.queryResult === queryResult) {
             this.loading = false;
@@ -180,7 +180,7 @@ class Widget {
         });
     }
 
-    return this.queryResult.toPromise()[0];
+    return this.queryResult.toPromise();
   }
 
   save(key, value) {
